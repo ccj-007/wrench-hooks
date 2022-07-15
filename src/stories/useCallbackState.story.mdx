@@ -1,0 +1,30 @@
+import { Meta } from '@storybook/addon-docs'
+import CallbackState from './useCallbackState.demo.tsx'
+
+<Meta title='hooks/useCallbackState' />
+
+<h2 style={{ color: '#ff3399' }}> useCallbackState Reference </h2>
+
+<CallbackState />
+
+<h2 style={{ color: '#ff3399' }}>useCallbackState Usage </h2>
+setState的第二个参数是回调，可以获得最新的state
+
+```js
+import { useCallbackState } from 'wrench-hooks'
+
+export default function CallbackState() {
+  let [state, setState] = useCallbackState < number > 0
+  const addCount = () => {
+    setState(
+      (pre: number) => {
+        return pre + 1
+      },
+      (v: number) => {
+        console.log('new', v)
+      }
+    )
+  }
+  return <button onClick={addCount}>score + 1, current: {state}</button>
+}
+```

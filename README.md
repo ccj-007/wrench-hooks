@@ -2,14 +2,16 @@
 
 ## What ?
 
-wrench-hooks 扳手 hooks 工具库，针对<span >业务场景</span>开发的 hooks，轻量简洁~~~
+wrench-hooks 扳手 hooks 工具库，针对<span >业务场景</span>开发的 hooks，轻量简洁~~~ (该库支持 TS 类型支持)
 
 ## Quick Start
 
 ```js
 npm i wrench-hooks
 
-import { useCallbackState } from 'wrench-hooks'
+import { useTitle } from 'wrench-hooks'
+
+useTitle('welcome to  wrench-hooks')
 ```
 
 ## API
@@ -19,7 +21,7 @@ import { useCallbackState } from 'wrench-hooks'
 | useCallbackState | 用于获取最新的 state            |
 | useDebounce      | 常见用于 input 的输入的防抖处理 |
 | useThrottle      | 按钮点击必用的节流处理          |
-| useMouce         | 跟踪鼠标的位置                  |
+| useMouse         | 跟踪鼠标的位置                  |
 | useScroll        | 跟踪网页滚轮的位置              |
 | useWindowSize    | 跟踪网页的尺寸缩放              |
 | useFullScreen    | 全局显示元素或视频              |
