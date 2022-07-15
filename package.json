@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "description": "轻量的hooks小工具",
   "private": true,
-  "main": "src/hooks/index",
+  "types": "lib/types/index.js",
+  "main": "lib/index.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -15,12 +16,14 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "typescript": "^4.7.4",
+    "rollup": "^2.76.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rollup --config rollup.config.build.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6008 -s public",
@@ -56,6 +59,11 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.18.6",
+    "@babel/preset-env": "^7.18.6",
+    "@rollup/plugin-commonjs": "^22.0.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.3",
     "@storybook/addon-actions": "^6.5.9",
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-interactions": "^6.5.9",
@@ -79,8 +87,12 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "install": "^0.13.0",
     "prettier": "^2.7.1",
     "prop-types": "^15.8.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4",
     "webpack": "^5.73.0"
   }
 }
