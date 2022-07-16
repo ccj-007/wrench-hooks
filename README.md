@@ -1,3 +1,5 @@
+![](./public/logo.png)
+
 <h1 >Welcome to wrench-hooks</h1>
 
 ## What ?

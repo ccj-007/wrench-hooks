@@ -8,6 +8,8 @@ import { Meta } from '@storybook/addon-docs'
       color: #ff3399;
     }
     .use {
+      cursor: point;
+      text-decoration:underline;
       width: 200px;
       text-align: center;
       background: #ff3399;
@@ -26,9 +28,11 @@ import { Meta } from '@storybook/addon-docs'
   `}
 </style>
 
+<img src='/logo.png'></img>
+
 <h1 className='title'>Welcome to wrench-hooks</h1>
 
-wrench-hooks 扳手 hooks 工具库，针对<span className='title'>业务场景</span>开发的 hooks，轻量简洁~~~
+wrench-hooks 扳手 hooks 工具库，针对<span className='title'>业务场景</span>开发的 hooks，轻量简洁~~~ <span className='title'>(TS 类型支持)</span>
 
 ```js
 npm i wrench-hooks
@@ -54,44 +58,66 @@ export const UseText = () => {
     {
       usename: 'useCallbackState',
       text: '用于获取最新的 state',
+      link: '/story/hooks-usecallbackstate--page',
+    },
+    {
+      usename: 'createMemo',
+      text: 'useMemo的封装, 自动收集传参的依赖',
+      link: '/story/hooks-createMemo--page',
+    },
+    {
+      usename: 'useUpdate',
+      text: '强制更新钩子',
+      link: '/story/hooks-useUpdate--page',
     },
     {
       usename: 'useDebounce',
       text: '常见用于input的输入的防抖处理',
+      link: '/story/hooks-useDebounce--page',
     },
     {
       usename: 'useThrottle',
       text: '按钮点击必用的节流处理',
+      link: '/story/hooks-useThrottle--page',
     },
     {
       usename: 'useMouce',
       text: '跟踪鼠标的位置',
+      link: '/story/hooks-useMounce--page',
     },
     {
       usename: 'useScroll',
       text: '跟踪网页滚轮的位置',
+      link: '/story/hooks-useScroll--page',
     },
     {
       usename: 'useWindowSize',
       text: '跟踪网页的尺寸缩放',
+      link: '/story/hooks-useWindowSize--page',
     },
     {
       usename: 'useFullScreen',
       text: '全局显示元素或视频',
+      link: '/story/hooks-useFullScreen--page',
     },
     {
       usename: 'useClip',
       text: '文本复制到剪贴板',
+      link: '/story/hooks-useClip--page',
     },
     {
       usename: 'useTitle',
       text: '修改标题',
+      link: '/story/hooks-useTitle--page',
     },
   ]
   return mapList.map((item, index) => {
     return (
       <div className='use-box' key={index}>
-        <div className='use'>{item.usename}</div> <div className='desc'>{item.text}</div>
+        <a className='use' href={item.link}>
+          {item.usename}
+        </a>
+        <div className='desc'>{item.text}</div>
       </div>
     )
   })

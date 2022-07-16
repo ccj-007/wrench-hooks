@@ -1,0 +1,33 @@
+import { Meta } from '@storybook/addon-docs'
+import Memo from './createMemo.demo.tsx'
+import Home from './Home'
+
+<Meta title='hooks/createMemo' />
+
+<h2 style={{ color: '#ff3399' }}> createMemo Reference </h2>
+
+<Memo />
+<Home />
+
+<h2 style={{ color: '#ff3399' }}>createMemo Usage </h2>
+useMemo的封装, 自动收集函数依赖的缓存钩子
+
+```js
+import { createMemo } from 'wrench-hooks'
+
+const Memo = () => {
+  const fibonacci = (n: number): number => {
+    if (n === 0) return 0
+    if (n === 1) return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)
+  }
+
+  const useMemoFibonacci = createMemo(fibonacci)
+
+  const result = useMemoFibonacci(10)
+
+  return <div>fib(10) = {result}</div>
+}
+
+export default Memo
+```
