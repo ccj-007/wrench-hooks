@@ -23,6 +23,8 @@ module.exports = {
   rules: {
     "react/no-unescaped-entities": 0,
     "Delete `␍`": 0,
-    "eslint-disable-next-line": 0
+    "eslint-disable-next-line": 0,
+    "react/react-in-jsx-scope": 0,
+    "prefer-const": 0
   }
 }

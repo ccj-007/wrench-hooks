@@ -1,12 +1,12 @@
-import useScroll from '../hooks/useScroll';
+import useScroll from '../hooks/useScroll'
 
 const Scroll = () => {
-  let { x, y } = useScroll()
+  const { x, y } = useScroll()
   return (
     <div>
-      x: {x}  y: {y}
+      x: {x} y: {y}
     </div>
-  );
-};
+  )
+}
 
 export default Scroll
