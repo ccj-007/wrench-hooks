@@ -1,0 +1,33 @@
+import { Meta } from '@storybook/addon-docs'
+import Mouse from './useMouse.demo.tsx'
+import Home from './Home'
+import { HooksText } from './introduction'
+
+<Meta title='hooks/useMouse' />
+
+<h2 style={{ color: '#ff3399' }}> useMouse Reference </h2>
+
+<Mouse />
+<Home />
+
+<h2 style={{ color: '#ff3399' }}>useMouse Usage </h2>
+
+<HooksText hookname={'useMouse'} />
+
+```js
+import React from 'react'
+import { useMouse } from 'wrench-hooks'
+
+const Mouse = () => {
+  const { x, y } = useMouse()
+  return (
+    <>
+      <div>
+        X：{x} Y：{y}
+      </div>
+    </>
+  )
+}
+
+export default Mouse
+```

@@ -1,0 +1,52 @@
+import { Meta } from '@storybook/addon-docs'
+import Debounce from './useDebounce.demo.tsx'
+import Home from './Home'
+import { HooksText } from './introduction'
+
+<Meta title='hooks/useDebounce' />
+
+<h2 style={{ color: '#ff3399' }}> useDebounce Reference </h2>
+
+<Debounce />
+<Home />
+
+<h2 style={{ color: '#ff3399' }}>useDebounce Usage </h2>
+
+<HooksText hookname={'useDebounce'} />
+
+```js
+import { ChangeEvent, useState } from 'react'
+import { useDebounce } from 'wrench-hooks'
+
+const Debounce = () => {
+  const [a, setA] = useState('')
+  const [b, setB] = useState(0)
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    if (e && e.target && e.target.value) {
+      setA(e.target.value)
+    }
+  }
+  const [cancel] = useDebounce(
+    () => {
+      setB(a)
+    },
+    1000,
+    [a]
+  )
+  // 5s后关闭
+  setTimeout(() => {
+    cancel()
+  }, 5000)
+  return (
+    <>
+      <input type='text' onChange={handleChange} />
+
+      <div>input: {a}</div>
+      <div>debounce result: {b}</div>
+    </>
+  )
+}
+
+export default Debounce
+```

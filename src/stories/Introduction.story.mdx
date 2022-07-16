@@ -1,6 +1,10 @@
 import { Meta } from '@storybook/addon-docs'
+import Home from './Home'
+import { mapList } from './introduction'
 
 <Meta title='Introduction' />
+
+<Home />
 
 <style>
   {`
@@ -54,68 +58,11 @@ export default function Title() {
 ```
 
 export const UseText = () => {
-  const mapList = [
-    {
-      usename: 'useCallbackState',
-      text: '用于获取最新的 state',
-      link: '/story/hooks-usecallbackstate--page',
-    },
-    {
-      usename: 'createMemo',
-      text: 'useMemo的封装, 自动收集传参的依赖',
-      link: '/story/hooks-createMemo--page',
-    },
-    {
-      usename: 'useUpdate',
-      text: '强制更新钩子',
-      link: '/story/hooks-useUpdate--page',
-    },
-    {
-      usename: 'useDebounce',
-      text: '常见用于input的输入的防抖处理',
-      link: '/story/hooks-useDebounce--page',
-    },
-    {
-      usename: 'useThrottle',
-      text: '按钮点击必用的节流处理',
-      link: '/story/hooks-useThrottle--page',
-    },
-    {
-      usename: 'useMouce',
-      text: '跟踪鼠标的位置',
-      link: '/story/hooks-useMounce--page',
-    },
-    {
-      usename: 'useScroll',
-      text: '跟踪网页滚轮的位置',
-      link: '/story/hooks-useScroll--page',
-    },
-    {
-      usename: 'useWindowSize',
-      text: '跟踪网页的尺寸缩放',
-      link: '/story/hooks-useWindowSize--page',
-    },
-    {
-      usename: 'useFullScreen',
-      text: '全局显示元素或视频',
-      link: '/story/hooks-useFullScreen--page',
-    },
-    {
-      usename: 'useClip',
-      text: '文本复制到剪贴板',
-      link: '/story/hooks-useClip--page',
-    },
-    {
-      usename: 'useTitle',
-      text: '修改标题',
-      link: '/story/hooks-useTitle--page',
-    },
-  ]
   return mapList.map((item, index) => {
     return (
       <div className='use-box' key={index}>
         <a className='use' href={item.link}>
-          {item.usename}
+          {item.hookname}
         </a>
         <div className='desc'>{item.text}</div>
       </div>

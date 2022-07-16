@@ -16,6 +16,10 @@ import { useTitle } from 'wrench-hooks'
 useTitle('welcome to  wrench-hooks')
 ```
 
+## Docs
+
+[document address](https://ccj-007.github.io/wrench-hooks/storybook-static/index)
+
 ## API
 
 | hooks            | description                     |

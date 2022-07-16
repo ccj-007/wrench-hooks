@@ -1,0 +1,39 @@
+import { Meta } from '@storybook/addon-docs'
+import Clip from './useClip.demo.tsx'
+import Home from './Home'
+import { HooksText } from './introduction'
+
+<Meta title='hooks/useClip' />
+
+<h2 style={{ color: '#ff3399' }}> useClip Reference </h2>
+
+<Clip />
+<Home />
+
+<h2 style={{ color: '#ff3399' }}>useClip Usage </h2>
+
+<HooksText hookname={'useClip'} />
+
+```js
+import { useClip } from 'wrench-hooks'
+
+const Clip = () => {
+  const [text, setText] = React.useState < string > ''
+  const [read, copy] = useClip()
+
+  const handleCopy = async () => {
+    await copy(text)
+  }
+  return (
+    <div>
+      <input value={text} onChange={(e) => setText(e.target.value)} />
+      <button type='button' onClick={handleCopy}>
+        copy text
+      </button>
+      <div>{read}</div>
+    </div>
+  )
+}
+
+export default Clip
+```

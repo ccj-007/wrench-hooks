@@ -1,0 +1,36 @@
+import { Meta } from '@storybook/addon-docs'
+import FullScreen from './useFullScreen.demo.tsx'
+import Home from './Home'
+import { HooksText } from './introduction'
+
+<Meta title='hooks/useFullScreen' />
+
+<h2 style={{ color: '#ff3399' }}> useFullScreen Reference </h2>
+
+<FullScreen />
+<Home />
+
+<h2 style={{ color: '#ff3399' }}>useFullScreen Usage </h2>
+
+<HooksText hookname={'useFullScreen'} />
+
+```js
+import { useRef, useState } from 'react'
+import { useFullScreen } from 'wrench-hooks'
+
+cconst FullScreen = () => {
+  const ref = useRef(null)
+  const [show, setShow] = useState(false);
+  const isFullscreen = useFullscreen(ref, show, () => setShow(!show));
+
+  return (
+    <div ref={ref} style={{ backgroundColor: 'white' }}>
+      <div>{isFullscreen ? 'Fullscreen' : 'Not fullscreen'}</div>
+      <button onClick={() => setShow(!show)}>Toggle</button>
+      <video src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" autoPlay />
+    </div>
+  );
+}
+
+export default FullScreen
+```
