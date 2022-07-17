@@ -7,7 +7,7 @@ interface MapListType {
 export const mapList: MapListType[] = [
   {
     hookname: 'createMemo',
-    text: 'createMemo的封装, 自动收集函数依赖的缓存钩子',
+    text: 'useMemo的封装, 自动收集函数依赖的缓存钩子',
     link: '/story/hooks-createMemo--page',
   },
   {
