@@ -13,9 +13,9 @@ export default function useWindowSize() {
 
   useEffect(() => {
     windowSizeEvents()
-    window.addEventListener('size', windowSizeEvents, false)
+    window.addEventListener('resize', windowSizeEvents, false)
     return () => {
-      window.removeEventListener('size', windowSizeEvents, false)
+      window.removeEventListener('resize', windowSizeEvents, false)
     }
   }, [])
 

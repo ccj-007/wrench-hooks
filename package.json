@@ -1,8 +1,7 @@
 {
   "name": "wrench-hooks",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "wrench-hooks针对业务场景的轻量的react-hooks工具， 支持ts类型",
-  "private": true,
   "types": "lib/types/index.js",
   "main": "lib/index.js",
   "author": {
@@ -10,6 +9,9 @@
     "email": "596487930@qq.com",
     "url": "https://github.com/ccj-007/wrench-hooks"
   },
+  "files": [
+    "lib"
+  ],
   "homepage": "https://ccj-007.github.io/wrench-hooks/storybook-static/index",
   "repository": {
     "type": "git",
