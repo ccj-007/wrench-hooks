@@ -11,6 +11,21 @@ export const mapList: MapListType[] = [
     link: '/story/hooks-createMemo--page',
   },
   {
+    hookname: 'createReducer',
+    text: '可以使用中间件的useReducer',
+    link: '/story/hooks-createReducer--page',
+  },
+  {
+    hookname: 'createReducerContext',
+    text: 'useReducer结合createContext实现组件状态共享',
+    link: '/story/hooks-createReducerContext--page',
+  },
+  {
+    hookname: 'createStateContext',
+    text: 'useState结合createContext实现组件状态共享',
+    link: '/story/hooks-createStateContext--page',
+  },
+  {
     hookname: 'useCallbackState',
     text: '用于获取最新的 state',
     link: '/story/hooks-usecallbackstate--page',
@@ -19,6 +34,16 @@ export const mapList: MapListType[] = [
     hookname: 'useUpdate',
     text: '强制更新钩子',
     link: '/story/hooks-useUpdate--page',
+  },
+  {
+    hookname: 'useFirstMountState',
+    text: '是否第一次渲染',
+    link: '/story/hooks-useFirstMountState--page',
+  },
+  {
+    hookname: 'useUpdateEffect',
+    text: '忽略第一次调用钩子的useEffect',
+    link: '/story/hooks-useUpdateEffect--page',
   },
   {
     hookname: 'useDebounce',
@@ -41,11 +66,6 @@ export const mapList: MapListType[] = [
     link: '/story/hooks-useScroll--page',
   },
   {
-    hookname: 'useWindowSize',
-    text: '跟踪网页的尺寸缩放',
-    link: '/story/hooks-useWindowSize--page',
-  },
-  {
     hookname: 'useFullScreen',
     text: '全局显示元素或视频',
     link: '/story/hooks-useFullScreen--page',
@@ -59,6 +79,11 @@ export const mapList: MapListType[] = [
     hookname: 'useTitle',
     text: '修改标题',
     link: '/story/hooks-useTitle--page',
+  },
+  {
+    hookname: 'useWindowSize',
+    text: '跟踪网页的尺寸缩放',
+    link: '/story/hooks-useWindowSize--page',
   },
 ]
 

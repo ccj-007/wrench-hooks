@@ -1,0 +1,33 @@
+import { Meta } from '@storybook/addon-docs'
+import WindowSize from './useWindowSize.demo.tsx'
+import Home from './Home'
+import { HooksText } from './introduction'
+
+<Meta title='hooks/useWindowSize' />
+
+<h2 style={{ color: '#ff3399' }}> useWindowSize Reference </h2>
+
+<WindowSize />
+<Home />
+
+<h2 style={{ color: '#ff3399' }}>useWindowSize Usage </h2>
+
+<HooksText hookname={'useWindowSize'} />
+
+```js
+import React from 'react'
+import { useWindowSize } from 'wrench-hooks'
+
+const WindowSize = () => {
+  const { width, height } = useWindowSize()
+  return (
+    <>
+      <div>
+        宽度：{width} 高度：{height}
+      </div>
+    </>
+  )
+}
+
+export default WindowSize
+```
