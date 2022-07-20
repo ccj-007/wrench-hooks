@@ -1,4 +1,4 @@
-import useCallbackState from '../hooks/useCallbackState'
+import useCallbackState from '../../hooks/useCallbackState'
 
 export default function CallbackState() {
   const [state, setState] = useCallbackState<number>(0)

@@ -1,4 +1,4 @@
-import useTitle from '../hooks/useTitle'
+import useTitle from '../../hooks/useTitle'
 
 export default function Title() {
   return (

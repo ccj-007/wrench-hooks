@@ -1,4 +1,4 @@
-import createMemo from '../hooks/createMemo'
+import createMemo from '../../hooks/createMemo'
 
 const Memo = () => {
   const fibonacci = (n: number): number => {

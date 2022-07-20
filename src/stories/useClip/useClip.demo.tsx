@@ -1,5 +1,5 @@
 import React from 'react'
-import useClip from '../hooks/useClip'
+import useClip from '../../hooks/useClip'
 
 const Clip = () => {
   const [text, setText] = React.useState<string>('')

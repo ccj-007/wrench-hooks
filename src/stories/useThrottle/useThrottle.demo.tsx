@@ -1,22 +1,5 @@
-import { Meta } from '@storybook/addon-docs'
-import Throttle from './useThrottle.demo.tsx'
-import Home from './Home'
-import { HooksText } from './introduction'
-
-<Meta title='hooks/useThrottle' />
-
-<h2 style={{ color: '#ff3399' }}> useThrottle Reference </h2>
-
-<Throttle />
-<Home />
-
-<h2 style={{ color: '#ff3399' }}>useThrottle Usage </h2>
-
-<HooksText hookname={'useThrottle'} />
-
-```js
 import { useState } from 'react'
-import { useThrottle } from 'wrench-hooks'
+import useThrottle from '../../hooks/useThrottle'
 
 const Throttle = () => {
   const [a, setA] = useState(0)
@@ -34,7 +17,7 @@ const Throttle = () => {
     [a]
   )
 
-  //5s后关闭
+  // 5s后关闭
   setTimeout(() => {
     cancel()
   }, 5000)
@@ -48,4 +31,3 @@ const Throttle = () => {
 }
 
 export default Throttle
-```

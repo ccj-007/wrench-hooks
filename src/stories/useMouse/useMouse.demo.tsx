@@ -1,5 +1,5 @@
 import React from 'react'
-import useMouse from '../hooks/useMouse'
+import useMouse from '../../hooks/useMouse'
 
 const Mouse = () => {
   const { x, y } = useMouse()

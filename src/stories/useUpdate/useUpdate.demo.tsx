@@ -1,5 +1,5 @@
 import React from 'react'
-import useUpdate from '../hooks/useUpdate'
+import useUpdate from '../../hooks/useUpdate'
 
 const Update = () => {
   const update = useUpdate()

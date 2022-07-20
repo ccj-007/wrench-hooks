@@ -1,5 +1,5 @@
 import { ChangeEvent, useState } from 'react'
-import useDebounce from '../hooks/useDebounce'
+import useDebounce from '../../hooks/useDebounce'
 
 const Debounce = () => {
   const [a, setA] = useState('')

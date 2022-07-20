@@ -1,4 +1,4 @@
-import useScroll from '../hooks/useScroll'
+import useScroll from '../../hooks/useScroll'
 
 const Scroll = () => {
   const { x, y } = useScroll()
