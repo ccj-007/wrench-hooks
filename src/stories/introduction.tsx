@@ -12,7 +12,7 @@ export const mapList: MapListType[] = [
   },
   {
     hookname: 'createReducer',
-    text: '可以使用中间件的useReducer',
+    text: '结合thunk、logger中间件的useReducer',
     link: '/story/hooks-createReducer--page',
   },
   {

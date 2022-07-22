@@ -35,6 +35,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "redux": "^4.2.0",
+    "redux-logger": "^3.0.6",
+    "rimraf": "^3.0.2",
     "rollup": "^2.76.0",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",
@@ -47,7 +50,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6008 -s public",
     "build-storybook": "eslint --fix --ext .js,.tsx,.ts src && build-storybook -s public",
-    "lint": "eslint --fix --ext .js,.tsx,.ts src"
+    "lint": "eslint --fix --ext .js,.tsx,.ts src",
+    "storybook:clean": "rimraf storybook-static"
   },
   "eslintConfig": {
     "extends": [
@@ -109,7 +113,7 @@
     "install": "^0.13.0",
     "prettier": "^2.7.1",
     "prop-types": "^15.8.1",
-    "redux-thunk": "^2.4.1",
+    "redux-thunk": "^2.3.0",
     "rollup-plugin-babel": "^4.4.0",
     "tslib": "^2.4.0",
     "typescript": "^4.7.4",
