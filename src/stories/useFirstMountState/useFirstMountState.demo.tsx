@@ -1,10 +1,10 @@
-import * as React from 'react';
+import * as React from 'react'
 import useFirstMountState from '../../hooks/useFirstMountState'
 import useUpdate from '../../hooks/useUpdate'
 
 const FirstMountState = () => {
-  const isFirstMount = useFirstMountState();
-  const update = useUpdate();
+  const isFirstMount = useFirstMountState()
+  const update = useUpdate()
 
   return (
     <div>
@@ -12,7 +12,7 @@ const FirstMountState = () => {
       <br />
       <button onClick={update}>re-render</button>
     </div>
-  );
-};
+  )
+}
 
 export default FirstMountState

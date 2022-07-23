@@ -45,7 +45,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "rollup --config rollup.config.build.js",
+    "build": "rollup --config rollup.config.build.js && eslint --fix --ext .js,.tsx,.ts src && build-storybook -s public",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6008 -s public",

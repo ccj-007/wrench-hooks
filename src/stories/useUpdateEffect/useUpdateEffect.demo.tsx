@@ -7,7 +7,7 @@ function UpdateEffect() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCount(count => count + 1)
+      setCount((count) => count + 1)
     }, 1000)
 
     return () => {
@@ -16,15 +16,17 @@ function UpdateEffect() {
   }, [])
 
   useUpdateEffect(() => {
-    console.log("count", count);
+    console.log('count', count)
 
     setGet(count)
   }, [count])
-  return <div>
-    <div>当前值: {count}</div>
+  return (
+    <div>
+      <div>当前值: {count}</div>
 
-    <div>我接收到的值： {get}</div>
-  </div>
+      <div>我接收到的值： {get}</div>
+    </div>
+  )
 }
 
 export default UpdateEffect
