@@ -1,0 +1,35 @@
+import { Meta } from '@storybook/addon-docs'
+import FirstMountState from './useFirstMountState.demo.tsx'
+import Home from '../Home'
+import { HooksText } from '../introduction'
+
+<Meta title='hooks/useFirstMountState' />
+
+<h2 style={{ color: '#ff3399' }}> useFirstMountState Reference </h2>
+
+<FirstMountState />
+<Home />
+
+<h2 style={{ color: '#ff3399' }}>useFirstMountState Usage </h2>
+
+<HooksText hookname={'useFirstMountState'} />
+
+```js
+import React from 'react'
+import { useFirstMountState, useUpdate } from ' wrench-hooks'
+
+const FirstMountState = () => {
+  const isFirstMount = useFirstMountState()
+  const update = useUpdate()
+
+  return (
+    <div>
+      <span>This component is just mounted: {isFirstMount ? 'YES' : 'NO'}</span>
+      <br />
+      <button onClick={update}>re-render</button>
+    </div>
+  )
+}
+
+export default FirstMountState
+```

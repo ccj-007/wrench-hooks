@@ -1,9 +1,9 @@
 import React from 'react'
 import createReducer from '../../hooks/createReducer'
 
-//自定义中间件
+// 自定义中间件
 const logger = (state: any, action: any) => {
-  console.log("state", state, 'action', action);
+  console.log('state', state, 'action', action)
 }
 const createMiddlewareReducer = createReducer([logger])
 
@@ -31,11 +31,11 @@ function reducer(state: StateType, action: ActionType) {
 const Reducer = () => {
   const [state, dispatch] = createMiddlewareReducer(reducer, { count: 0 })
 
-  //支持thunk的函数类型的传入, 支持异步
+  // 支持thunk的函数类型的传入, 支持异步
   const waitFn = (waitDispatch: any, waitState: any) => {
     setTimeout(() => {
       waitDispatch({ type: 'increment' })
-    }, 2000);
+    }, 2000)
   }
   return (
     <div>

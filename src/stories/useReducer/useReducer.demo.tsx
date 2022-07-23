@@ -12,4 +12,4 @@
 
 // export default WindowSize
 
-export { }
+export {}

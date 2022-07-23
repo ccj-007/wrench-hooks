@@ -25,6 +25,7 @@ module.exports = {
     "Delete `␍`": 0,
     "eslint-disable-next-line": 0,
     "react/react-in-jsx-scope": 0,
-    "prefer-const": 0
+    "prefer-const": 0,
+    "no-unused-vars": 0
   }
 }

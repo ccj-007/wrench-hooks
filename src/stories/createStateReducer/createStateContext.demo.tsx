@@ -1,58 +1,37 @@
-import createStateContext from '../../hooks/createStateContext';
+import createStateContext from '../../hooks/createStateContext'
 
-type Action = 'increment' | 'decrement';
-
-const reducer = (state: number, action: Action) => {
-  switch (action) {
-    case 'increment':
-      return state + 1;
-    case 'decrement':
-      return state - 1;
-    default:
-      throw new Error();
-  }
-};
-
-const [useStateContext, StateProvider] = createStateContext(0);
+const [useSharedText, SharedTextProvider] = createStateContext(0)
 
 const ComponentA = () => {
-  const [count, dispatch] = useStateContext();
+  const [text, setText] = useSharedText()
   return (
     <p>
-      Component A &nbsp;
-      <button type="button" onClick={() => dispatch('decrement')}>
-        -
-      </button>
-      &nbsp;{count}&nbsp;
-      <button type="button" onClick={() => dispatch('increment')}>
-        +
-      </button>
+      Component A:
+      <br />
+      {/* @ts-ignore */}
+      <input type='text' value={text} onInput={(ev) => setText(ev.target.value)} />
     </p>
-  );
-};
+  )
+}
 
 const ComponentB = () => {
-  const [count, dispatch] = useStateContext();
+  const [text, setText] = useSharedText()
   return (
     <p>
-      Component B &nbsp;
-      <button type="button" onClick={() => dispatch('decrement')}>
-        -
-      </button>
-      &nbsp;{count}&nbsp;
-      <button type="button" onClick={() => dispatch('increment')}>
-        +
-      </button>
+      Component B:
+      <br />
+      {/* @ts-ignore */}
+      <input type='text' value={text} onInput={(ev) => setText(ev.target.value)} />
     </p>
-  );
-};
+  )
+}
 
 export const Demo = () => {
   return (
-    <StateProvider>
-      <p>Those two counters share the same value.</p>
+    <SharedTextProvider>
+      <p>Those two fields share the same value.</p>
       <ComponentA />
       <ComponentB />
-    </StateProvider>
-  );
-};
+    </SharedTextProvider>
+  )
+}

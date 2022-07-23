@@ -42,7 +42,7 @@ export const mapList: MapListType[] = [
   },
   {
     hookname: 'useUpdateEffect',
-    text: '忽略第一次调用钩子的useEffect',
+    text: ' 忽略第一次调用钩子的useEffect的update更新状态',
     link: '/story/hooks-useUpdateEffect--page',
   },
   {

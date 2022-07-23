@@ -5,10 +5,11 @@ import { useReducer } from 'react'
 
 const createReducer = (middlewareList: Function[]) => {
   return (reducer: unknown, initVal: unknown) => {
+    // @ts-ignore
     const [state, dispatch] = useReducer(reducer, initVal)
 
     const thunkDispatch = (action: any) => {
-      //中间件
+      // 中间件
       middlewareList.forEach((middleware) => {
         middleware(state, action)
       })
@@ -16,6 +17,7 @@ const createReducer = (middlewareList: Function[]) => {
       if (typeof action === 'function') {
         return action(dispatch, state)
       }
+      // @ts-ignore
       return dispatch(action)
     }
     return [state, thunkDispatch]

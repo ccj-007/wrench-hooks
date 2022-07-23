@@ -1,51 +1,51 @@
-import createReducerContext from '../../hooks/createReducerContext';
+import createReducerContext from '../../hooks/createReducerContext'
 
-type Action = 'increment' | 'decrement';
+type Action = 'increment' | 'decrement'
 
 const reducer = (state: number, action: Action) => {
   switch (action) {
     case 'increment':
-      return state + 1;
+      return state + 1
     case 'decrement':
-      return state - 1;
+      return state - 1
     default:
-      throw new Error();
+      throw new Error()
   }
-};
+}
 
-const [useSharedCounter, SharedCounterProvider] = createReducerContext(reducer, 0);
+const [useSharedCounter, SharedCounterProvider] = createReducerContext(reducer, 0)
 
 const ComponentA = () => {
-  const [count, dispatch] = useSharedCounter();
+  const [count, dispatch] = useSharedCounter()
   return (
     <p>
       Component A &nbsp;
-      <button type="button" onClick={() => dispatch('decrement')}>
+      <button type='button' onClick={() => dispatch('decrement')}>
         -
       </button>
       &nbsp;{count}&nbsp;
-      <button type="button" onClick={() => dispatch('increment')}>
+      <button type='button' onClick={() => dispatch('increment')}>
         +
       </button>
     </p>
-  );
-};
+  )
+}
 
 const ComponentB = () => {
-  const [count, dispatch] = useSharedCounter();
+  const [count, dispatch] = useSharedCounter()
   return (
     <p>
       Component B &nbsp;
-      <button type="button" onClick={() => dispatch('decrement')}>
+      <button type='button' onClick={() => dispatch('decrement')}>
         -
       </button>
       &nbsp;{count}&nbsp;
-      <button type="button" onClick={() => dispatch('increment')}>
+      <button type='button' onClick={() => dispatch('increment')}>
         +
       </button>
     </p>
-  );
-};
+  )
+}
 
 export const Demo = () => {
   return (
@@ -54,5 +54,5 @@ export const Demo = () => {
       <ComponentA />
       <ComponentB />
     </SharedCounterProvider>
-  );
-};
+  )
+}
