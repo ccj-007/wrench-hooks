@@ -31,6 +31,11 @@ export const mapList: MapListType[] = [
     link: '/story/hooks-usecallbackstate--page',
   },
   {
+    hookname: 'useClickOutside',
+    text: '点击DOM的外部的回调',
+    link: '/story/hooks-useClickOutside--page',
+  },
+  {
     hookname: 'useUpdate',
     text: '强制更新钩子',
     link: '/story/hooks-useUpdate--page',

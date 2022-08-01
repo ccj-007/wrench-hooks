@@ -1,0 +1,31 @@
+import { Meta } from '@storybook/addon-docs'
+import ClickOutside from './useClickOutside.demo.tsx'
+import Home from '../Home'
+import { HooksText } from '../introduction'
+
+<Meta title='hooks/useClickOutside' />
+
+<h2 style={{ color: '#ff3399' }}> useClickOutside Reference </h2>
+
+<ClickOutside />
+<Home />
+
+<h2 style={{ color: '#ff3399' }}>useClickOutside Usage </h2>
+
+<HooksText hookname={'useClickOutside'} />
+
+```js
+import * as React from 'react'
+import useClickOutside from '../../hooks/useClickOutside'
+
+const ClickOutside = () => {
+  let btnRef = React.useRef < HTMLButtonElement > null
+  useClickOutside(btnRef, (e: Event) => {
+    console.log('我已经点击btnRef的dom元素的外面')
+  })
+
+  return <button ref={btnRef}>点外面试试</button>
+}
+
+export default ClickOutside
+```

@@ -1,6 +1,6 @@
 {
   "name": "wrench-hooks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "wrench-hooks针对业务场景的轻量的react-hooks工具， 支持ts类型",
   "types": "lib/types/index.js",
   "main": "lib/index.js",

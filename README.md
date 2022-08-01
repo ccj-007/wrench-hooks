@@ -42,3 +42,4 @@ useTitle('welcome to  wrench-hooks')
 | useFullScreen        | 全局显示元素或视频                                |
 | useClip              | 文本复制到剪贴板                                  |
 | useTitle             | 修改标题                                          |
+| useClickOutside      | 点击 DOM 外部区域的回调                           |
